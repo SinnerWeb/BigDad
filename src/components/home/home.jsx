@@ -1,7 +1,7 @@
 import './home.css'
 import React, {useState, useEffect} from 'react';
 
-export default function Home () {
+export default function Home ({product,addItem}) {
 
 const [products, setProducts] = useState([]);
 
@@ -27,6 +27,7 @@ const [products, setProducts] = useState([]);
           <h2>{product.name_product}</h2>
           <p>{product.descrip}</p>
           <p>{product.price} грн.</p>
+          <button onClick={() => addItem(product)}>Добавить в корзину</button>
         </div>
       ))}
     </div>

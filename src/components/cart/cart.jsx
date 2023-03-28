@@ -17,7 +17,7 @@ function Cart() {
   }
 
   return (
-    <div>
+    <div className='cart__wrapper'>
       <h2>Корзина</h2>
       <ul>
         {items.map((item, index) => (
