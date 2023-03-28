@@ -23,7 +23,7 @@ const [products, setProducts] = useState([]);
       {products.map((product) => (
         <div class="product" key={product.id}>
           <div class="img__wrapper">
-            <img src={`./images/img/${product.img_url}`}  alt=""/>
+            <img src={`/images/img/${product.img_url}`}  alt=""/>
           </div>
           <h2>{product.name_product}</h2>
           <p>{product.descrip}</p>
