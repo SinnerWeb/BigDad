@@ -23,7 +23,7 @@ function Cart() {
 
     const data = { phone, adress, items };
 
-    axios.post('http://localhost:8080/save-order.php', data)
+    axios.post('/save-order.php', data)
       .then((response) => {
         console.log(response.data);
         // обработка успешного ответа
@@ -46,7 +46,7 @@ function Cart() {
           <div>Ціна: {item.price} грн.</div>
         </div>
       ))}</div>
-        <form onSubmit={handleSubmit}>
+        <form method="POST" action="/save-order.php" onSubmit={handleSubmit}>
           <label htmlFor='phone'>Номер телефону:</label>
           <input type='text' id='phone' value={phone} onChange={(event) => setPhone(event.target.value)} />
 
