@@ -12,6 +12,7 @@ export default function Header() {
           <li><Link to="bar">Бар</Link></li>
           <li><Link to="pizza">Піца</Link></li>
         </ul>
+        <div className='icon__cart'><Link to="cart"><img src="/images/icon/cart1.svg" alt="" /></Link></div>
         <div class="header__phone">+380 00 111 5535</div>
       </header>
       </div>

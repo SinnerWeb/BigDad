@@ -1,14 +1,21 @@
-import './home.css'
+import '../style/main.css'
+import myArray from '../../myArray';
+
 import React, {useState, useEffect} from 'react';
-import Cart from '../cart';
+// import Cart from '../cart/cart';
 
+export function pusharr(product) {
+  myArray.push({
+    name: product.name_product,
+    price: product.price
+  });
 
+  console.log(myArray);
+}
 
 export default function Home () {
-  
 
 const [products, setProducts] = useState([]);
-const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
       fetch('http://test1.com/main.php')
@@ -19,16 +26,9 @@ const [cartItems, setCartItems] = useState([]);
   });
   }, []);
 
-  const addToCart = (product) => {
-    setCartItems([...cartItems, product]);
-  };
-
-  const clearCart = () => {
-    setCartItems([]);
-  };
-
    return (
-      <div className='Home'>
+      <div className='content'>
+
              <h2>Основне</h2>
 
 <div class="product__wrapper">
@@ -40,16 +40,13 @@ const [cartItems, setCartItems] = useState([]);
           <h2>{product.name_product}</h2>
           <p>{product.descrip}</p>
           <p>{product.price} грн.</p>
-          <button onClick={() => addToCart(product)}>Добавить в корзину</button>
+          <button className='push__btn' onClick={() => pusharr(product)}>
+          Додати у кошик
+            </button>
         </div>
       ))}
     </div>
-    <Cart items={cartItems}/>
-    {cartItems.length > 0 && (
-      <div className='cart__actions'>
-        <button onClick={clearCart}>Очистить корзину</button>
-      </div>
-    )}
       </div>
    )
 }
+

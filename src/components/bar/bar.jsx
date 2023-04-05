@@ -1,6 +1,17 @@
-import './bar.css'
+import '../style/main.css'
+import myArray from '../../myArray';
 
 import React, {useState, useEffect} from 'react';
+// import Cart from '../cart/cart';
+
+export function pusharr(product) {
+  myArray.push({
+    name: product.name_product,
+    price: product.price
+  });
+
+  console.log(myArray);
+}
 
 export default function Bar () {
 
@@ -16,7 +27,8 @@ const [products, setProducts] = useState([]);
   }, []);
 
    return (
-      <div className='Bar'>
+      <div className='content'>
+
              <h2>Бар</h2>
 
 <div class="product__wrapper">
@@ -28,9 +40,13 @@ const [products, setProducts] = useState([]);
           <h2>{product.name_product}</h2>
           <p>{product.descrip}</p>
           <p>{product.price} грн.</p>
+          <button className='push__btn' onClick={() => pusharr(product)}>
+          Додати у кошик
+            </button>
         </div>
       ))}
     </div>
       </div>
    )
 }
+

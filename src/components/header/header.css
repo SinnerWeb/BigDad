@@ -11,6 +11,7 @@ header {
   top: 0;
   left: 0;
   border-bottom: 2px solid rgb(201, 141, 85);
+  z-index: 2;
 }
 
 .header__logo {
@@ -27,7 +28,30 @@ header {
   justify-content: space-around;
   font-size: 20px;
 }
+/* ----------------------------------------------------- */
+.header__nav li {
+  position: relative;
+}
 
+.header__nav li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(201, 141, 85);
+  transition: 0.2s;
+}
+
+.header__nav li :hover {
+  color: rgb(201, 141, 85);
+}
+
+.header__nav li:hover::after {
+  width: 100%;
+}
+/* ----------------------------------------------------- */
 .header__phone {
   font-size: 20px;
   font-weight: 700;
@@ -35,4 +59,31 @@ header {
   padding: 10px 25px;
   border: 2px solid rgb(201, 141, 85);
   cursor: pointer;
+}
+
+.icon__cart {
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes tilt-and-bounce {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg) translateY(-10px);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.icon__cart:hover {
+  animation: tilt-and-bounce 0.5s ease-in-out;
+}
+
+.icon__cart img {
+  max-width: 50%;
 }
