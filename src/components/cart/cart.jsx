@@ -23,7 +23,7 @@ function Cart() {
 
     const data = { phone, adress, items };
 
-    axios.post('/order.php', data)
+    axios.post('http://localhost:8080/save-order.php', data)
       .then((response) => {
         console.log(response.data);
         // обработка успешного ответа
