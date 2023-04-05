@@ -19,6 +19,11 @@ function Cart() {
           <div>Ціна: {item.price} грн.</div>
         </div>
       ))}</div>
+      <form action="">
+        <input type="phone" placeholder='Номер телефону' />
+        <input type="text" placeholder='Адреса' />
+        <button>Замовити</button>
+      </form>
       <h3>Загальна ціна: {totalPrice} грн.</h3>
       </div>
       </div>
