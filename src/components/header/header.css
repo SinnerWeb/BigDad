@@ -87,3 +87,7 @@ header {
 .icon__cart img {
   max-width: 50%;
 }
+
+.header__burger {
+  display: none;
+}

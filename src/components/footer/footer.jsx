@@ -1,4 +1,5 @@
 import './footer.css'
+import '../style/media.css'
 
 export default function Footer () {
    return (
