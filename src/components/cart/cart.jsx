@@ -1,24 +1,20 @@
-import './cart.css'
+import '../style/cart.css'
 import React from 'react';
-// import React, { useState } from 'react';
+import '../style/media.css'
 import myArray from '../../myArray';
 
 function handleOrder() {
   const phone = document.getElementById("phone").value;
   const data = { items: myArray.map(item => ({ name: item.name, price: item.price })), phone: phone };
-  // const data = { items: myArray.name, price: myArray.price, phone: phone };
 
   fetch('http://test1.com/orders.php', {
     method: 'POST',
-    // headers: {
-    //   'Content-Type': 'application/json'
-    // },
     body: JSON.stringify(data)
   })
   .then(response => response.json())
   .then(data => {
     console.log('Success:', data);
-    myArray.splice(0, myArray.length); // очистить массив после успешной отправки данных
+    myArray.splice(0, myArray.length);
   })
   .catch((error) => {
     console.error('Error:', error);
@@ -28,7 +24,6 @@ function handleOrder() {
 function handleDelete() {
   myArray.splice(0, myArray.length);
 }
-
 
 function Cart() {
 

@@ -14,6 +14,14 @@ header {
   z-index: 2;
 }
 
+.logo__wrapper {
+  display: flex;
+  align-items: center;
+}
+.logo__wrapper :first-child {
+  margin: 0 10px 0 0;
+}
+
 .header__logo {
   font-weight: 700;
   font-size: 30px;
@@ -24,11 +32,10 @@ header {
   display: flex;
   list-style-type: none;
   width: 550px;
-  /* background-color: aqua; */
   justify-content: space-around;
   font-size: 20px;
 }
-/* ----------------------------------------------------- */
+
 .header__nav li {
   position: relative;
 }
@@ -51,7 +58,7 @@ header {
 .header__nav li:hover::after {
   width: 100%;
 }
-/* ----------------------------------------------------- */
+
 .header__phone {
   font-size: 20px;
   font-weight: 700;

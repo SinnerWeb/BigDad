@@ -1,13 +1,12 @@
 footer {
-  /* height: 750px; */
   background-color: black;
   border-top: 2px solid rgb(201, 141, 85);
-  margin: 20px 0 0 0;
+  margin: 85px 0 0 0;
   padding: 20px 30px;
 
   display: flex;
   color: white;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .footer__info {

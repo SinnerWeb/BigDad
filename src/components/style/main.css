@@ -5,12 +5,10 @@
 
 .content h2 {
   font-size: 40px;
-  /* font-weight: 700; */
   margin: 0 0 50px 0;
 }
 
 .product__wrapper {
-  /* background-color: aquamarine; */
   max-width: 1500px;
   margin: 0 auto;
   display: grid;
@@ -21,7 +19,7 @@
 
 .product__wrapper :hover {
   transition: ease-in 0.2s;
-  box-shadow: 1px 1px 7px gray;
+  box-shadow: 1px 1px 7px rgb(128, 128, 128);
 }
 
 .product :hover {
@@ -32,7 +30,6 @@
   text-align: center;
   width: 300px;
   height: 550px;
-  /* background-color: rgb(12, 136, 245); */
   cursor: pointer;
   position: relative;
   z-index: 1;
@@ -58,7 +55,6 @@
 }
 
 .img__wrapper {
-  /* background-color: aqua; */
   margin: 0 0 30px 0;
 }
 
@@ -69,12 +65,9 @@
 
 .cart__wrapper {
   position: fixed;
-  /* background-color: antiquewhite; */
   top: 10.3%;
   left: 87%;
 }
-
-/* ///////////////////////////////////////////////// */
 
 button {
   text-align: center;

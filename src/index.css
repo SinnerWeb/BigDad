@@ -101,7 +101,6 @@ header {
   display: flex;
   list-style-type: none;
   width: 550px;
-  /* background-color: aqua; */
   justify-content: space-around;
   font-size: 20px;
 }
